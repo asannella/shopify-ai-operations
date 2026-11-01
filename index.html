@@ -1,510 +1,551 @@
 <!doctype html>
 <html lang="en">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Shopify and AI, from an operator's seat</title>
-  <meta name="description" content="A self-read deck for ecommerce leaders on the ways you can work with Shopify and AI today.">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,500;0,9..40,700;1,9..40,500&family=Lora:ital,wght@0,400;0,600;1,400&family=Playfair+Display:ital,wght@0,700;0,900;1,700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="vendor/reveal/dist/reset.css">
-  <link rel="stylesheet" href="vendor/reveal/dist/reveal.css">
-  <link rel="stylesheet" href="css/brand.css">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Shopify and AI, from an operator's seat</title>
+<meta name="description" content="A working guide for ecommerce leaders: every surface where your store and an AI model now meet, what each one can actually do today, and how to put them to work.">
+<meta name="author" content="Amanda Sannella">
+<meta property="og:title" content="Shopify and AI, from an operator's seat">
+<meta property="og:description" content="A working guide for ecommerce leaders: every surface where your store and an AI model now meet, and what each one can actually do today.">
+<meta property="og:type" content="article">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,500;0,9..40,700;1,9..40,500&family=Lora:ital,wght@0,400;0,600;1,400&family=Playfair+Display:ital,wght@0,700;1,700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/brand.css">
 </head>
 <body>
-<div class="reveal">
-<div class="slides">
 
-<!-- ============ TITLE ============ -->
-<section class="no-mark">
-  <div class="slide-body center title-slide">
+<div id="progress"></div>
+
+<!-- ============================= HERO ============================= -->
+<header class="hero">
+  <div class="inner">
     <div class="wordmark">Amanda Sannella</div>
     <h1>Shopify and AI, from an operator's seat</h1>
-    <div class="rule-pink"></div>
+    <div class="rule"></div>
     <p class="lede">Every surface where your store and an AI model now meet, what each one can actually do today, and how to put them to work.</p>
-    <div class="meta">A self-read guide &nbsp;&middot;&nbsp; Current as of November 2026</div>
+    <div class="meta">
+      <span>A working guide</span>
+      <span>Verified 1 November 2026</span>
+      <span>Reading time about 20 minutes</span>
+    </div>
   </div>
-</section>
+</header>
+<div class="hero-sep"><hr></div>
 
-<section>
-  <div class="slide-body center">
-    <p class="eyebrow"><span class="num">00</span> How to read this</p>
-    <div class="split">
-      <div>
-        <p class="lede">You do not need to read it in order.</p>
-        <p class="sub">The first two sections set up a way of thinking. Everything after that is a reference: one surface per section, what it does, what it refuses to do, and the prompts to start with.</p>
-      </div>
-      <div>
-        <p class="col-label">A note on accuracy</p>
-        <p class="sub">Every capability claim here traces to Shopify's own documentation, and each section ends with its sources. This space moves fast. Where something is early access or rolling out, it says so.</p>
-      </div>
+<div class="shell">
+
+<!-- ============================= RAIL ============================= -->
+<nav class="rail" aria-label="Contents">
+  <details open>
+    <summary>Contents</summary>
+    <a class="mark" href="#top">Shopify and AI</a>
+    <div class="mark-sub">From an operator's seat</div>
+
+    <div class="group">Start here</div>
+    <ol>
+      <li><a class="nav" href="#how-to-read"><span class="n">00</span><span>How to use this</span></a></li>
+      <li><a class="nav" href="#where-we-are"><span class="n">01</span><span>Where we are</span></a></li>
+      <li><a class="nav" href="#systems-thinking"><span class="n">02</span><span>A way to think about it</span></a></li>
+      <li><a class="nav" href="#the-map"><span class="n">03</span><span>The map</span></a></li>
+    </ol>
+
+    <div class="group">Where buyers meet you</div>
+    <ol>
+      <li><a class="nav" href="#catalog"><span class="n">04</span><span>Catalog and Agentic Storefronts</span></a></li>
+      <li><a class="nav" href="#shop"><span class="n">05</span><span>Shop</span></a></li>
+    </ol>
+
+    <div class="group">Where you run the store</div>
+    <ol>
+      <li><a class="nav" href="#sidekick"><span class="n">06</span><span>Sidekick</span></a></li>
+      <li><a class="nav" href="#canvas"><span class="n">07</span><span>Canvas</span></a></li>
+      <li><a class="nav" href="#connectors"><span class="n">08</span><span>AI connectors</span></a></li>
+      <li><a class="nav" href="#flow"><span class="n">09</span><span>Flow</span></a></li>
+      <li><a class="nav" href="#ai-toolkit"><span class="n">10</span><span>Shopify AI Toolkit</span></a></li>
+    </ol>
+
+    <div class="group">Then decide</div>
+    <ol>
+      <li><a class="nav" href="#decide"><span class="n">11</span><span>Four decisions</span></a></li>
+      <li><a class="nav" href="#sources"><span class="n">12</span><span>Sources and currency</span></a></li>
+    </ol>
+  </details>
+</nav>
+
+<!-- ============================= CONTENT ============================= -->
+<main class="content" id="top">
+
+<!-- ---------- 00 ---------- -->
+<section class="section" id="how-to-read">
+  <p class="eyebrow"><span class="n">00</span> How to use this</p>
+  <h2>You do not need to read it in order</h2>
+  <div class="prose">
+    <p>The first three sections set up a way of thinking about what is happening. Everything after that is reference material: one surface per section, what it does, what it refuses to do, and the prompts to start with. Use the contents list to jump.</p>
+  </div>
+  <div class="cards c2">
+    <div class="card">
+      <h4>On accuracy</h4>
+      <p>Every capability claim here traces to Shopify's own documentation, and each section ends with its sources. Community forums, agency blogs and news aggregators were not used for any capability, limit or plan claim.</p>
+    </div>
+    <div class="card">
+      <h4>On currency</h4>
+      <p>This space moves quickly. Where something is early access or still rolling out, it says so. Before acting on a specific limit, availability or admin path, confirm it against current documentation.</p>
     </div>
   </div>
 </section>
 
-<section id="index">
-  <div class="slide-body center">
-    <p class="eyebrow">Index</p>
-    <h2>Jump to a section</h2>
-    <div class="split" style="margin-top:18px">
-      <div>
-        <p class="col-label">Start here</p>
-        <ul class="toc">
-          <li><a href="#/where-we-are"><span class="n">01</span> Where we are</a></li>
-          <li><a href="#/systems-thinking"><span class="n">02</span> A way to think about it</a></li>
-          <li><a href="#/the-map"><span class="n">03</span> The map: seven surfaces, two lanes</a></li>
-        </ul>
-        <p class="col-label" style="margin-top:26px">Where buyers meet you</p>
-        <ul class="toc">
-          <li><a href="#/catalog"><span class="n">04</span> Shopify Catalog and Agentic Storefronts</a></li>
-          <li><a href="#/shop"><span class="n">10</span> Shop</a></li>
-        </ul>
-      </div>
-      <div>
-        <p class="col-label">Where you run the store</p>
-        <ul class="toc">
-          <li><a href="#/sidekick"><span class="n">05</span> Sidekick</a></li>
-          <li><a href="#/canvas"><span class="n">06</span> Canvas</a></li>
-          <li><a href="#/connectors"><span class="n">07</span> AI connectors</a></li>
-          <li><a href="#/ai-toolkit"><span class="n">08</span> Shopify AI Toolkit</a></li>
-          <li><a href="#/flow"><span class="n">09</span> Flow</a></li>
-        </ul>
-        <p class="col-label" style="margin-top:26px">Then decide</p>
-        <ul class="toc">
-          <li><a href="#/decide"><span class="n">11</span> Four decisions that are yours</a></li>
-        </ul>
-      </div>
+<!-- ---------- 01 ---------- -->
+<section class="section" id="where-we-are">
+  <p class="eyebrow"><span class="n">01</span> Where we are</p>
+  <h2>AI stopped being a feature you buy</h2>
+  <p class="standfirst">It became a place your customers shop, and a way you run the store. Two shifts, happening at once, on different clocks.</p>
+
+  <div class="slot">
+    <span class="tag">Content slot &nbsp;&middot;&nbsp; opening narrative</span>
+    <p>Amanda's intro on how AI is changing ecommerce operations goes here, from the working document.</p>
+    <p>Candidate opener from the existing material: the Crawl / Walk / Run / Fly progression with "we are here" marked, or the "overwhelm is a misuse of your imagination" opening.</p>
+  </div>
+
+  <h3>The two shifts</h3>
+  <div class="cards c2">
+    <div class="card">
+      <h4>Shift one &nbsp;&middot;&nbsp; demand side</h4>
+      <p><strong>Your catalog is already somewhere you did not put it.</strong></p>
+      <p>Shoppers ask an assistant instead of typing into a search bar. Shopify syndicates eligible products to those assistants by default, and on several of them the purchase now completes inside the conversation.</p>
+    </div>
+    <div class="card">
+      <h4>Shift two &nbsp;&middot;&nbsp; supply side</h4>
+      <p><strong>The admin is no longer the only way in.</strong></p>
+      <p>Sidekick sits inside Shopify. Official connectors put the same store behind Claude, ChatGPT, Gemini, Copilot and others. Your team can run real parts of the business by asking for them.</p>
     </div>
   </div>
+
+  <p class="sources"><strong>Sources</strong>
+    <a href="https://help.shopify.com/en/manual/shopify-catalog">Shopify Catalog</a>,
+    <a href="https://help.shopify.com/en/manual/online-sales-channels/agentic-storefronts">Agentic Storefronts</a> and
+    <a href="https://help.shopify.com/en/manual/ai-powered-tools/connecting-ai-tools">Connecting AI tools</a>, help.shopify.com. Accessed 1 November 2026.</p>
 </section>
 
-<!-- ============ 01 INTRO ============ -->
-<section class="divider" id="where-we-are">
-  <div class="slide-body">
-    <p class="eyebrow"><span class="num">01</span> Where we are</p>
-    <h2>AI stopped being a feature you buy. It became a place your customers shop and a way you run the store.</h2>
-    <div class="rule-pink"></div>
-    <p class="lede">Two shifts, happening at once, on different clocks.</p>
+<!-- ---------- 02 ---------- -->
+<section class="section" id="systems-thinking">
+  <p class="eyebrow"><span class="n">02</span> A way to think about it</p>
+  <h2>Treat it as one system, not a shortlist of tools</h2>
+  <p class="standfirst">The useful question is not which AI tool to buy. It is which parts of this you control, which you influence, and which you can only adapt to.</p>
+
+  <div class="slot">
+    <span class="tag">Content slot &nbsp;&middot;&nbsp; systems thinking framework</span>
+    <p>Amanda's systems-thinking framework goes here, from the working document, with how it applies to AI in ecommerce operations.</p>
+    <p>The three rings below are a placeholder structure built from the research. Replace or reframe once the document lands.</p>
   </div>
-</section>
 
-<section>
-  <div class="slide-body center">
-    <p class="eyebrow"><span class="num">01</span> Pending content</p>
-    <h2>Opening narrative</h2>
-    <p class="lede">This section comes from Amanda's working document.</p>
-    <p class="sub">Placeholder. To be replaced with the intro narrative on how AI is changing ecommerce operations.</p>
-  </div>
-</section>
-
-<section>
-  <div class="slide-body center">
-    <p class="eyebrow"><span class="num">01</span> The two shifts</p>
-    <h2>One changes who finds you. One changes how you work.</h2>
-    <div class="split" style="margin-top:26px">
-      <div class="card">
-        <h3>Shift one &nbsp;&middot;&nbsp; demand side</h3>
-        <p><strong>Your catalog is already somewhere you did not put it.</strong></p>
-        <p>Shoppers ask an assistant instead of a search bar. Shopify syndicates eligible products to those assistants by default, and on some of them the purchase completes inside the chat.</p>
-      </div>
-      <div class="card">
-        <h3>Shift two &nbsp;&middot;&nbsp; supply side</h3>
-        <p><strong>The admin is no longer the only way in.</strong></p>
-        <p>Sidekick sits inside Shopify. Official connectors put the same store behind Claude, ChatGPT, Gemini, Copilot and others. Your team can run parts of the business by asking.</p>
-      </div>
+  <h3>Control, influence, adapt</h3>
+  <div class="cards c3">
+    <div class="card">
+      <h4>You control</h4>
+      <ul>
+        <li>Product data and how complete it is</li>
+        <li>Your published policies</li>
+        <li>The store facts you publish to agents</li>
+        <li>Which channels and checkouts are on</li>
+        <li>Who on your team holds which access</li>
+      </ul>
     </div>
-    <p class="footnote">Sources: help.shopify.com Shopify Catalog and Agentic Storefronts; help.shopify.com Connecting AI tools. Accessed 2026-11-01.</p>
-  </div>
-</section>
-
-<!-- ============ 02 SYSTEMS THINKING ============ -->
-<section class="divider" id="systems-thinking">
-  <div class="slide-body">
-    <p class="eyebrow"><span class="num">02</span> A way to think about it</p>
-    <h2>Treat it as one system, not a list of tools to evaluate.</h2>
-    <div class="rule-pink"></div>
-    <p class="lede">What you control, what you influence, and what you can only adapt to.</p>
-  </div>
-</section>
-
-<section>
-  <div class="slide-body center">
-    <p class="eyebrow"><span class="num">02</span> Pending content</p>
-    <h2>Systems thinking framework</h2>
-    <p class="lede">This section comes from Amanda's working document.</p>
-    <p class="sub">Placeholder. To be replaced with the systems-thinking framework and how it applies to AI in ecommerce operations.</p>
-  </div>
-</section>
-
-<section>
-  <div class="slide-body center">
-    <p class="eyebrow"><span class="num">02</span> Three rings</p>
-    <h2>Control, influence, adapt</h2>
-    <div class="cards c3" style="margin-top:24px">
-      <div class="card">
-        <h3>You control</h3>
-        <ul>
-          <li>Product data and how complete it is</li>
-          <li>Your published policies</li>
-          <li>The store facts you publish to agents</li>
-          <li>Which channels and checkouts are on</li>
-          <li>Who on your team gets which access</li>
-        </ul>
-      </div>
-      <div class="card">
-        <h3>You influence</h3>
-        <ul>
-          <li>Whether an agent finds you credible</li>
-          <li>Fulfillment and return reliability</li>
-          <li>How fresh your inventory and pricing stay</li>
-          <li>The quality of what you let AI draft</li>
-        </ul>
-      </div>
-      <div class="card">
-        <h3>You adapt to</h3>
-        <ul>
-          <li>How each assistant ranks and words things</li>
-          <li>Which regions get in-chat checkout</li>
-          <li>What the models change next quarter</li>
-          <li>Attribution you can no longer see</li>
-        </ul>
-      </div>
+    <div class="card">
+      <h4>You influence</h4>
+      <ul>
+        <li>Whether an agent finds you credible</li>
+        <li>Fulfillment and return reliability</li>
+        <li>How fresh your inventory and pricing stay</li>
+        <li>The quality of whatever you let AI draft</li>
+      </ul>
     </div>
-    <p class="footnote">Each AI channel controls the final ranking, wording and shopping experience. Eligibility does not guarantee placement. Source: help.shopify.com Agentic Storefronts, accessed 2026-11-01.</p>
-  </div>
-</section>
-
-<!-- ============ 03 THE MAP ============ -->
-<section class="divider" id="the-map">
-  <div class="slide-body">
-    <p class="eyebrow"><span class="num">03</span> The map</p>
-    <h2>Seven surfaces. Two lanes. Know which lane you are in.</h2>
-    <div class="rule-pink"></div>
-    <p class="lede">The most common confusion in this space is mistaking a selling channel for an operating tool.</p>
-  </div>
-</section>
-
-<section>
-  <div class="slide-body center">
-    <p class="eyebrow"><span class="num">03</span> Two lanes</p>
-    <h2>Where buyers meet you &nbsp;&nbsp;vs&nbsp;&nbsp; where you run the store</h2>
-    <div class="split" style="margin-top:22px">
-      <div>
-        <p class="col-label">Buyer-facing &nbsp;&middot;&nbsp; distribution</p>
-        <div class="card" style="margin-bottom:14px">
-          <h3>Shopify Catalog and Agentic Storefronts</h3>
-          <p>Your products inside ChatGPT, Copilot, Google, Meta and Shop. On by default for eligible stores.</p>
-        </div>
-        <div class="card">
-          <h3>Shop</h3>
-          <p>Shopify's own consumer app and the Shop Pay rails that outside agents now check out through.</p>
-        </div>
-      </div>
-      <div>
-        <p class="col-label">Operator-facing &nbsp;&middot;&nbsp; running the business</p>
-        <div class="card" style="margin-bottom:12px">
-          <h3>Sidekick</h3>
-          <p>The assistant built into your admin.</p>
-        </div>
-        <div class="card" style="margin-bottom:12px">
-          <h3>Canvas</h3>
-          <p>Designing the storefront by describing it. Early access.</p>
-        </div>
-        <div class="card" style="margin-bottom:12px">
-          <h3>AI connectors</h3>
-          <p>Your store behind Claude, ChatGPT, Gemini, Copilot, Perplexity, Grok and Muse.</p>
-        </div>
-        <div class="card" style="margin-bottom:12px">
-          <h3>Shopify AI Toolkit</h3>
-          <p>For whoever writes code for you.</p>
-        </div>
-        <div class="card">
-          <h3>Flow</h3>
-          <p>Automation, now partly drafted and managed by agents.</p>
-        </div>
-      </div>
+    <div class="card">
+      <h4>You adapt to</h4>
+      <ul>
+        <li>How each assistant ranks and words things</li>
+        <li>Which regions get in-chat checkout</li>
+        <li>What the models change next quarter</li>
+        <li>Attribution you can no longer see</li>
+      </ul>
     </div>
   </div>
+
+  <div class="callout">
+    <p>Each AI channel controls the final ranking, wording and shopping experience. Being eligible does not guarantee placement.</p>
+  </div>
+
+  <p class="sources"><strong>Sources</strong>
+    <a href="https://help.shopify.com/en/manual/online-sales-channels/agentic-storefronts">Agentic Storefronts</a>, help.shopify.com. Accessed 1 November 2026.</p>
 </section>
 
-<section>
-  <div class="slide-body center">
-    <p class="eyebrow"><span class="num">03</span> At a glance</p>
-    <h2>What each surface is for</h2>
+<!-- ---------- 03 ---------- -->
+<section class="section" id="the-map">
+  <p class="eyebrow"><span class="n">03</span> The map</p>
+  <h2>Seven surfaces, two lanes</h2>
+  <p class="standfirst">The most common confusion in this space is mistaking a selling channel for an operating tool. They are governed differently, measured differently, and owned by different people on your team.</p>
+
+  <div class="tablewrap">
     <table>
       <thead>
-        <tr><th style="width:21%">Surface</th><th style="width:15%">Lane</th><th style="width:40%">Use it for</th><th style="width:24%">Status today</th></tr>
+        <tr><th style="width:22%">Surface</th><th style="width:14%">Lane</th><th style="width:38%">Use it for</th><th style="width:26%">Status today</th></tr>
       </thead>
       <tbody>
         <tr><td><strong>Catalog and Agentic Storefronts</strong></td><td>Buyer</td><td>Being found and bought inside AI assistants</td><td><span class="pill live">On by default</span></td></tr>
+        <tr><td><strong>Shop</strong></td><td>Buyer</td><td>Shopify's consumer app, and the Shop Pay rails inside other agents</td><td><span class="pill live">Live</span></td></tr>
         <tr><td><strong>Sidekick</strong></td><td>Operator</td><td>Everyday store work, in plain language, inside the admin</td><td><span class="pill live">Included with your plan</span></td></tr>
         <tr><td><strong>Canvas</strong></td><td>Operator</td><td>Designing and rebuilding a theme by describing it</td><td><span class="pill early">Early access</span></td></tr>
         <tr><td><strong>AI connectors</strong></td><td>Operator</td><td>Running store tasks from the assistant your team already uses</td><td><span class="pill live">Live, seven tools</span></td></tr>
+        <tr><td><strong>Flow</strong></td><td>Operator</td><td>Automation that agents can now draft, test and manage</td><td><span class="pill live">Live, with caveats</span></td></tr>
         <tr><td><strong>Shopify AI Toolkit</strong></td><td>Operator, technical</td><td>Giving your developers accurate Shopify context in their coding tools</td><td><span class="pill live">Live</span></td></tr>
-        <tr><td><strong>Flow</strong></td><td>Operator</td><td>Automation that agents can now draft, test and manage</td><td><span class="pill live">Live, see caveats</span></td></tr>
-        <tr><td><strong>Shop</strong></td><td>Buyer</td><td>Shopify's consumer app and the Shop Pay rails inside outside agents</td><td><span class="pill live">Live</span></td></tr>
       </tbody>
     </table>
-    <p class="footnote">Sources listed at the end of each section. All statuses verified against Shopify documentation on 2026-11-01.</p>
   </div>
+
+  <figure>
+    <svg class="dgm" viewBox="0 0 1040 430" role="img" aria-labelledby="dgm1t dgm1d">
+      <title id="dgm1t">Two lanes: operator tooling acts on your store, your store syndicates to buyer surfaces</title>
+      <desc id="dgm1d">Operator-facing tools, Sidekick, Canvas, AI connectors, Flow and the AI Toolkit, act on your store. Your store, which holds product data, inventory, pricing, policies and store facts, syndicates outward to buyer-facing surfaces: ChatGPT, Microsoft Copilot, Google, Meta and Shop.</desc>
+
+      <text class="d-cap" x="0" y="16">Where you run the store</text>
+      <text class="d-cap" x="396" y="16">The thing itself</text>
+      <text class="d-cap d-cap-accent" x="810" y="16">Where buyers meet you</text>
+
+      <g class="d-chip">
+        <rect x="0" y="36" width="230" height="46" rx="10"/><text x="18" y="64">Sidekick</text>
+        <rect x="0" y="92" width="230" height="46" rx="10"/><text x="18" y="120">Canvas</text>
+        <rect x="0" y="148" width="230" height="46" rx="10"/><text x="18" y="176">AI connectors</text>
+        <rect x="0" y="204" width="230" height="46" rx="10"/><text x="18" y="232">Flow</text>
+        <rect x="0" y="260" width="230" height="46" rx="10"/><text x="18" y="288">Shopify AI Toolkit</text>
+      </g>
+
+      <g class="d-arrow">
+        <path d="M242 59 H372"/><path d="M242 115 H372"/><path d="M242 171 H372"/>
+        <path d="M242 227 H372"/><path d="M242 283 H372"/>
+        <path d="M366 165 l10 6 -10 6 z" class="d-head"/>
+      </g>
+
+      <rect class="d-core" x="384" y="36" width="282" height="270" rx="14"/>
+      <text class="d-core-title" x="408" y="80">Your store</text>
+      <g class="d-core-item">
+        <text x="408" y="118">Product data and completeness</text>
+        <text x="408" y="148">Inventory and pricing</text>
+        <text x="408" y="178">Published policies</text>
+        <text x="408" y="208">Store facts, the Knowledge base</text>
+        <text x="408" y="238">Who holds which access</text>
+      </g>
+      <text class="d-core-note" x="408" y="280">One record. Every surface reads it.</text>
+
+      <g class="d-arrow d-arrow-accent">
+        <path d="M678 59 H800"/><path d="M678 115 H800"/><path d="M678 171 H800"/>
+        <path d="M678 227 H800"/><path d="M678 283 H800"/>
+        <path d="M794 165 l10 6 -10 6 z" class="d-head-accent"/>
+      </g>
+
+      <g class="d-chip d-chip-accent">
+        <rect x="810" y="36" width="230" height="46" rx="10"/><text x="828" y="59">ChatGPT</text><text class="d-sub" x="828" y="73">Referral to your checkout</text>
+        <rect x="810" y="92" width="230" height="46" rx="10"/><text x="828" y="115">Microsoft Copilot</text><text class="d-sub" x="828" y="129">In-chat checkout</text>
+        <rect x="810" y="148" width="230" height="46" rx="10"/><text x="828" y="171">Google and Gemini</text><text class="d-sub" x="828" y="185">In-chat, rolling out</text>
+        <rect x="810" y="204" width="230" height="46" rx="10"/><text x="828" y="227">Meta</text><text class="d-sub" x="828" y="241">In-chat checkout</text>
+        <rect x="810" y="260" width="230" height="46" rx="10"/><text x="828" y="283">Shop</text><text class="d-sub" x="828" y="297">In-app, multi-brand cart</text>
+      </g>
+
+      <line class="d-rule" x1="0" y1="340" x2="1040" y2="340"/>
+      <text class="d-foot" x="0" y="364">You configure this side.</text>
+      <text class="d-foot" x="384" y="364">You own this.</text>
+      <text class="d-foot" x="810" y="364">They rank and word it.</text>
+    </svg>
+    <figcaption>Operator tooling acts on your store. Your store syndicates outward to the buyer surfaces. The same product record feeds both lanes, which is why data completeness is now a distribution question rather than a merchandising chore.</figcaption>
+  </figure>
 </section>
 
-<!-- ============ 04 CATALOG ============ -->
-<section class="divider" id="catalog">
-  <div class="slide-body">
-    <p class="eyebrow"><span class="num">04</span> Buyer-facing</p>
-    <h2>Shopify Catalog and Agentic Storefronts</h2>
-    <div class="rule-pink"></div>
-    <p class="lede">The part that is already happening whether or not anyone on your team has looked at it.</p>
-  </div>
-</section>
+<!-- ---------- 04 CATALOG ---------- -->
+<section class="section" id="catalog">
+  <p class="eyebrow"><span class="n">04</span> Where buyers meet you <span class="lane">Buyer-facing</span></p>
+  <h2>Shopify Catalog and Agentic Storefronts</h2>
+  <p class="standfirst">The part that is already happening whether or not anyone on your team has looked at it.</p>
 
-<section>
-  <div class="slide-body center">
-    <p class="eyebrow"><span class="num">04</span> What it is</p>
-    <h2>One structured product list, read by the assistants</h2>
-    <div class="split wide-left">
-      <div>
-        <p class="lede">Shopify Catalog is a structured source of product information gathered from eligible products sold by stores on Shopify. Select AI platforms, shopping sites and agents read from it.</p>
-        <p class="sub">Agentic Storefronts is the admin channel that syndicates that data and controls checkout per channel. You find it under Sales channels, then Agentic.</p>
-      </div>
-      <div>
-        <div class="callout">
-          <span class="big">On by default</span>
-          <p class="sub">Eligible stores are in Catalog and the channel is active without anyone turning it on. You cannot opt out of Catalog itself. You can block individual agentic storefronts, and opting out can take up to seven days.</p>
-        </div>
-      </div>
+  <h3>What it is</h3>
+  <div class="prose">
+    <p>Shopify Catalog is a structured source of product information gathered from eligible products sold by stores on Shopify. Selected AI platforms, shopping sites and agents read from it. Agentic Storefronts is the admin channel that syndicates that data and controls checkout per channel, found under <strong>Sales channels</strong>, then <strong>Agentic</strong>.</p>
+  </div>
+
+  <div class="callout">
+    <span class="big">On by default</span>
+    <p>Eligible stores are in Catalog and the channel is active without anyone turning it on. You cannot opt out of Catalog itself. You can block individual agentic storefronts, and opting out can take up to seven days to take effect.</p>
+  </div>
+
+  <h3>What has to be true before you show up</h3>
+  <div class="cards c2">
+    <div class="card">
+      <h4>Your store</h4>
+      <ul>
+        <li>Starter plan or higher, not in private mode</li>
+        <li>Not password-protected, B2B-only, locked or in development</li>
+        <li>Terms of service, privacy policy and a return and refund policy published under Settings, then Policies</li>
+        <li>Account in good standing: verified email, two-factor on, low chargebacks, invoices paid</li>
+      </ul>
     </div>
-    <p class="footnote">Sources: help.shopify.com/en/manual/shopify-catalog and /en/manual/online-sales-channels/agentic-storefronts, accessed 2026-11-01.</p>
-  </div>
-</section>
-
-<section>
-  <div class="slide-body center">
-    <p class="eyebrow"><span class="num">04</span> Eligibility</p>
-    <h2>What has to be true before you show up</h2>
-    <div class="split">
-      <div>
-        <p class="col-label">Your store</p>
-        <ul class="sub">
-          <li>Starter plan or higher, not in private mode</li>
-          <li>Not password-protected, B2B-only, locked or in development</li>
-          <li>Terms of service, privacy policy and a return and refund policy published under Settings, then Policies</li>
-          <li>Account in good standing: verified email, two-factor on, low chargebacks, invoices paid</li>
-        </ul>
-      </div>
-      <div>
-        <p class="col-label">Each product</p>
-        <ul class="sub">
-          <li>A title, at least one image, and a price above zero</li>
-          <li>Published to Online Store, Hydrogen or Headless with an identifiable URL</li>
-          <li>Not in an excluded category such as alcohol, tobacco, weapons, adult, services, event tickets or live animals</li>
-          <li>Product-level opt-out is possible via Unlisted status or the seo.hidden metafield</li>
-        </ul>
-      </div>
+    <div class="card">
+      <h4>Each product</h4>
+      <ul>
+        <li>A title, at least one image, and a price above zero</li>
+        <li>Published to Online Store, Hydrogen or Headless with an identifiable URL</li>
+        <li>Not in an excluded category such as alcohol, tobacco, weapons, adult, services, event tickets or live animals</li>
+        <li>Product-level opt-out is possible with Unlisted status or the <code>seo.hidden</code> metafield</li>
+      </ul>
     </div>
-    <p class="footnote">Eligibility is reviewed over time, and eligibility does not guarantee placement. Source: help.shopify.com/en/manual/shopify-catalog/requirements, accessed 2026-11-01.</p>
   </div>
-</section>
+  <p class="prose">Eligibility is reviewed over time, and eligibility does not guarantee placement.</p>
 
-<section>
-  <div class="slide-body center">
-    <p class="eyebrow"><span class="num">04</span> The channels</p>
-    <h2>Where the checkout happens is the thing to know</h2>
+  <h3>The channels, and where checkout happens</h3>
+  <p class="prose">This is the single most useful table in the guide. Whether the buyer completes inside the assistant or lands on your own checkout changes your margin, your data and your customer relationship.</p>
+  <div class="tablewrap">
     <table>
       <thead>
-        <tr><th style="width:20%">Channel</th><th style="width:26%">Checkout</th><th style="width:30%">Buyer regions</th><th style="width:24%">Status</th></tr>
+        <tr><th style="width:18%">Channel</th><th style="width:28%">Checkout</th><th style="width:30%">Buyer regions</th><th style="width:24%">Status</th></tr>
       </thead>
       <tbody>
-        <tr><td><strong>ChatGPT</strong></td><td>Referral. Buyer completes on your own checkout</td><td>Sells to US customers; your store can be based elsewhere</td><td><span class="pill live">Live</span></td></tr>
+        <tr><td><strong>ChatGPT</strong></td><td>Referral. The buyer completes on your own checkout</td><td>Sells to US customers. Your store can be based elsewhere</td><td><span class="pill live">Live</span></td></tr>
         <tr><td><strong>Microsoft Copilot</strong></td><td>In-chat, Shopify-powered</td><td>United States only</td><td><span class="pill live">Live, on by default</span></td></tr>
-        <tr><td><strong>Google AI Mode and Gemini</strong></td><td>In-chat, Shopify-powered, via UCP</td><td>US, Canada, Australia</td><td><span class="pill early">Rolling out gradually</span></td></tr>
+        <tr><td><strong>Google AI Mode and Gemini</strong></td><td>In-chat, Shopify-powered, through UCP</td><td>US, Canada, Australia</td><td><span class="pill early">Rolling out gradually</span></td></tr>
         <tr><td><strong>Meta</strong></td><td>In-chat</td><td>US, Canada, Mexico, Brazil, Japan, Singapore</td><td><span class="pill live">Live</span></td></tr>
-        <tr><td><strong>Shop</strong></td><td>In-app, including a multi-brand cart</td><td>See the Shop section</td><td><span class="pill live">Catalog access cannot be turned off</span></td></tr>
+        <tr><td><strong>Shop</strong></td><td>In-app, including a multi-brand cart</td><td>See the Shop section</td><td><span class="pill live">Catalog access cannot be switched off</span></td></tr>
       </tbody>
     </table>
-    <p class="footnote">Google additionally requires Google Merchant Center with product and shipping sync. Sources: the per-channel pages under help.shopify.com/en/manual/online-sales-channels/agentic-storefronts, accessed 2026-11-01.</p>
   </div>
-</section>
+  <p class="prose">Google additionally requires Google Merchant Center with product and shipping sync.</p>
 
-<section>
-  <div class="slide-body center">
-    <p class="eyebrow"><span class="num">04</span> The protocol</p>
-    <h2>UCP, and why a protocol matters to you</h2>
-    <div class="split wide-left">
-      <div>
-        <p class="lede">The Universal Commerce Protocol is an open standard covering catalog, cart, checkout, identity and the order lifecycle.</p>
-        <p class="sub">Co-developers listed at ucp.dev include Google, Shopify, Etsy, Wayfair, Target, Walmart, Amazon, Microsoft, Meta, Salesforce and Stripe. It is Apache 2.0 licensed. Shopify merchants are UCP-enabled by default.</p>
-      </div>
-      <div>
-        <div class="card">
-          <h3>Why a leader should care</h3>
-          <p>A standard means you are not integrating with each assistant one at a time, and you are not betting the roadmap on one of them winning.</p>
-          <p>It also means the rules you set once, on pricing, eligibility and shipping, travel with the product rather than living in a storefront the agent never visits.</p>
-        </div>
-      </div>
+  <h3>UCP, and why a protocol matters to you</h3>
+  <div class="prose">
+    <p>The Universal Commerce Protocol is an open standard covering catalog, cart, checkout, identity and the order lifecycle. Co-developers listed at ucp.dev include Google, Shopify, Etsy, Wayfair, Target, Walmart, Amazon, Microsoft, Meta, Salesforce and Stripe. It is Apache 2.0 licensed, and Shopify merchants are UCP-enabled by default.</p>
+    <p>A standard means you are not integrating with each assistant one at a time, and you are not betting your roadmap on one of them winning. It also means the rules you set once, on pricing, eligibility and shipping, travel with the product rather than living in a storefront the agent never visits.</p>
+  </div>
+
+  <figure>
+    <svg class="dgm" viewBox="0 0 1040 330" role="img" aria-labelledby="dgm2t dgm2d">
+      <title id="dgm2t">From prompt to purchase</title>
+      <desc id="dgm2d">A buyer asks an assistant. The assistant reads Shopify Catalog. A cart is built. Checkout either completes inside the assistant or hands off to your own checkout. Either way the order lands in your Shopify admin and you remain the seller of record.</desc>
+
+      <g class="d-step">
+        <rect x="0" y="40" width="186" height="84" rx="12"/>
+        <text class="d-n" x="18" y="66">01</text>
+        <text x="18" y="90">Buyer asks</text>
+        <text class="d-sub" x="18" y="108">an assistant, not a search bar</text>
+      </g>
+      <g class="d-step">
+        <rect x="214" y="40" width="186" height="84" rx="12"/>
+        <text class="d-n" x="232" y="66">02</text>
+        <text x="232" y="90">Catalog is read</text>
+        <text class="d-sub" x="232" y="108">your eligible products</text>
+      </g>
+      <g class="d-step">
+        <rect x="428" y="40" width="186" height="84" rx="12"/>
+        <text class="d-n" x="446" y="66">03</text>
+        <text x="446" y="90">A cart is built</text>
+        <text class="d-sub" x="446" y="108">live price and inventory</text>
+      </g>
+
+      <g class="d-arrow">
+        <path d="M192 82 H208"/><path d="M406 82 H422"/><path d="M620 82 H650"/>
+      </g>
+
+      <path class="d-arrow d-fork" d="M650 82 V54 H672"/>
+      <path class="d-arrow d-fork" d="M650 82 V146 H672"/>
+
+      <g class="d-step d-step-accent">
+        <rect x="676" y="22" width="200" height="64" rx="12"/>
+        <text x="694" y="48">In-chat checkout</text>
+        <text class="d-sub" x="694" y="68">Copilot, Google, Meta, Shop</text>
+      </g>
+      <g class="d-step">
+        <rect x="676" y="114" width="200" height="64" rx="12"/>
+        <text x="694" y="140">Your own checkout</text>
+        <text class="d-sub" x="694" y="160">ChatGPT referral</text>
+      </g>
+
+      <g class="d-arrow">
+        <path d="M882 54 H906 V96"/><path d="M882 146 H906 V96"/><path d="M906 96 H928"/>
+      </g>
+
+      <rect class="d-core" x="932" y="56" width="108" height="84" rx="12"/>
+      <text class="d-core-title2" x="950" y="92">Your</text>
+      <text class="d-core-title2" x="950" y="116">admin</text>
+
+      <line class="d-rule" x1="0" y1="212" x2="1040" y2="212"/>
+      <text class="d-foot" x="0" y="238">You stay merchant and seller of record on every path.</text>
+      <text class="d-foot d-foot-mute" x="0" y="262">On the in-chat path, client-side pixels do not fire, and the channel receives the buyer's name, email, phone and address.</text>
+      <text class="d-foot d-foot-mute" x="0" y="286">Refunds for orders from any AI channel are processed in your Shopify admin.</text>
+    </svg>
+    <figcaption>From prompt to purchase. The fork at checkout is the decision that matters most: it determines what your analytics can see, which of your checkout customizations survive, and what data the channel receives.</figcaption>
+  </figure>
+
+  <h3>What actually changes for your operation</h3>
+  <div class="cards c3">
+    <div class="card">
+      <h4>Completeness is ranking</h4>
+      <p>Titles, descriptions, images, categories, variants, prices and inventory. Data held in metafields has to be mapped, or it reads as missing.</p>
     </div>
-    <p class="footnote">It is Universal Commerce Protocol, not Platform. Sources: ucp.dev; shopify.com/news/spring-26-edition-merchant, 2026-06-17.</p>
-  </div>
-</section>
-
-<section>
-  <div class="slide-body center">
-    <p class="eyebrow"><span class="num">04</span> What actually changes</p>
-    <h2>Your product data is now the storefront</h2>
-    <div class="cards c3" style="margin-top:18px">
-      <div class="card">
-        <h3>Completeness is ranking</h3>
-        <p>Titles, descriptions, images, categories, variants, prices and inventory. Data held in metafields has to be mapped, or it reads as missing.</p>
-      </div>
-      <div class="card">
-        <h3>Store facts are an asset</h3>
-        <p>The Knowledge base under Sales channels, then Agentic, holds return windows, shipping and gift services. Shopify drafts facts from your pages, and nothing it drafted reaches agents until you publish it.</p>
-      </div>
-      <div class="card">
-        <h3>Some fields are inferred</h3>
-        <p>Shopify infers parts of the Catalog record and labels them as discovery signals rather than your own text. Check the agent-facing view, not only your product page.</p>
-      </div>
+    <div class="card">
+      <h4>Store facts are an asset</h4>
+      <p>The Knowledge base under Sales channels, then Agentic, holds return windows, shipping and gift services. Shopify drafts facts from your pages, and nothing it drafted reaches agents until you publish it.</p>
     </div>
-    <p class="footnote">Legal disclosures should sit in the first 6,000 characters of a description. Sources: help.shopify.com Agentic Storefronts; shopify.dev/docs/agents/catalog/global-catalog; changelog.shopify.com 2026-10-26. Accessed 2026-11-01.</p>
-  </div>
-</section>
-
-<section>
-  <div class="slide-body center">
-    <p class="eyebrow"><span class="num">04</span> The fine print that bites</p>
-    <h2>What breaks inside an in-chat checkout</h2>
-    <div class="split">
-      <div>
-        <p class="col-label">Not supported</p>
-        <ul class="sub">
-          <li>Subscription-only products, bundles, products with customization or line-item properties, B2B-only products</li>
-          <li>Local delivery, pickup in store, pickup points</li>
-          <li>Any flow that requires the customer to sign in</li>
-          <li>Most checkout blocks: upsells, loyalty, consent, custom fields, trust badges. Meta supports none</li>
-        </ul>
-      </div>
-      <div>
-        <p class="col-label">So the decision is</p>
-        <p class="sub">If those things carry your margin or your compliance, keep those products on referral, or turn direct checkout off for that channel and leave discovery on.</p>
-        <div class="callout" style="margin-top:14px">
-          <p class="sub"><strong>Refunds always come back to you.</strong> All refunds for orders placed through AI channels must be processed through your Shopify admin.</p>
-        </div>
-      </div>
-    </div>
-    <p class="footnote">Verified per channel on the Copilot, Google and Meta pages; the lists can differ by channel. Source: help.shopify.com Agentic Storefronts, accessed 2026-11-01.</p>
-  </div>
-</section>
-
-<section>
-  <div class="slide-body center">
-    <p class="eyebrow"><span class="num">04</span> The one to brief your team on</p>
-    <h2>Your analytics will under-count this channel</h2>
-    <div class="split wide-left">
-      <div>
-        <p class="lede">In a direct checkout, Google Analytics and custom pixels will not fire. Only server-to-server pixels do.</p>
-        <p class="sub">Expect gaps in GA4 and in ad-platform attribution for in-chat orders. The admin still shows Sales, Orders, Sessions and Conversion per channel, and that figure combines referral and direct checkout. Performance analytics are not yet available for headless stores.</p>
-      </div>
-      <div>
-        <div class="card">
-          <h3>What to tell finance and growth</h3>
-          <p>Do not let a dashboard that cannot see this channel decide it is not working.</p>
-          <p>Reconcile from the Shopify side first, then ask why the ad platform disagrees.</p>
-        </div>
-      </div>
-    </div>
-    <p class="footnote">Source: help.shopify.com Agentic Storefronts per-channel pages, accessed 2026-11-01.</p>
-  </div>
-</section>
-
-<section>
-  <div class="slide-body center">
-    <p class="eyebrow"><span class="num">04</span> Who owns the customer</p>
-    <h2>You stay the seller of record. You do share some data.</h2>
-    <div class="split">
-      <div>
-        <p class="col-label">Stays yours</p>
-        <ul class="sub">
-          <li>Merchant and seller of record on every channel</li>
-          <li>Your customer database and full order history</li>
-          <li>Fulfillment, service and the returns relationship</li>
-        </ul>
-      </div>
-      <div>
-        <p class="col-label">Shared on direct-checkout channels</p>
-        <ul class="sub">
-          <li>Order details including the customer's name, email, phone and address</li>
-          <li>Once shared, that data is governed by the AI company's terms, not Shopify's</li>
-        </ul>
-      </div>
-    </div>
-    <p class="footnote">Sources: help.shopify.com Agentic Storefronts data privacy page; ucp.dev. Accessed 2026-11-01.</p>
-  </div>
-</section>
-
-<section>
-  <div class="slide-body center">
-    <p class="eyebrow"><span class="num">04</span> Put it to work</p>
-    <h2>The first four things to do</h2>
-    <div class="cards c2" style="margin-top:14px">
-      <div class="card">
-        <h3>01 &nbsp; Go look</h3>
-        <p>Open Sales channels, then Agentic. See which channels are on, whether direct checkout is on, and whether Shopify is managing it for you.</p>
-      </div>
-      <div class="card">
-        <h3>02 &nbsp; Audit the data</h3>
-        <p>Find products missing an image, a category, a mapped metafield or a price. Those are the products no assistant will recommend.</p>
-      </div>
-      <div class="card">
-        <h3>03 &nbsp; Publish your facts</h3>
-        <p>Review what Shopify drafted into the Knowledge base. Nothing reaches agents until you publish it, so an unpublished draft is a silent gap.</p>
-      </div>
-      <div class="card">
-        <h3>04 &nbsp; Decide per channel</h3>
-        <p>For products that break in an in-chat checkout, choose referral deliberately rather than discovering it through a failed order.</p>
-      </div>
+    <div class="card">
+      <h4>Some fields are inferred</h4>
+      <p>Shopify infers parts of the Catalog record and labels them as discovery signals rather than your own text. Check the agent-facing view, not only your product page.</p>
     </div>
   </div>
-</section>
+  <p class="prose">Legal disclosures should sit in the first 6,000 characters of a product description.</p>
 
-<!-- ============ 05 SIDEKICK ============ -->
-<section class="divider" id="sidekick">
-  <div class="slide-body">
-    <p class="eyebrow"><span class="num">05</span> Operator-facing</p>
-    <h2>Sidekick</h2>
-    <div class="rule-pink"></div>
-    <p class="lede">The assistant that is already inside your admin, included with your plan.</p>
-  </div>
-</section>
-
-<section>
-  <div class="slide-body center">
-    <p class="eyebrow"><span class="num">05</span> What it is</p>
-    <h2>Ask in plain language, review, then approve</h2>
-    <div class="split wide-left">
-      <div>
-        <p class="lede">Sidekick is Shopify's AI commerce assistant, used to get guidance and complete complex, technical tasks in everyday language.</p>
-        <p class="sub">It sits on most pages of the admin and in the Shopify mobile app. There is nothing to install. It is included with your plan, though features and usage limits vary by plan, and it respects each staff member's existing permissions.</p>
-      </div>
-      <div>
-        <div class="callout">
-          <span class="big">It asks first</span>
-          <p class="sub">Sidekick cannot change your live store without your approval. Work it drafts lands in a Store changes card that holds up to 50 changes, and those drafts expire 10 days after the last update.</p>
-        </div>
-      </div>
+  <h3>The fine print that bites</h3>
+  <p class="prose">Several things simply do not work inside an in-chat checkout. If any of them carry your margin or your compliance, keep those products on referral, or switch direct checkout off for that channel and leave discovery on.</p>
+  <div class="cards c2">
+    <div class="card">
+      <h4>Not supported in direct checkout</h4>
+      <ul>
+        <li>Subscription-only products, bundles, products with customization or line-item properties, B2B-only products</li>
+        <li>Local delivery, pickup in store, pickup points</li>
+        <li>Any flow requiring the customer to sign in</li>
+        <li>Most checkout blocks: upsells, loyalty, consent, custom fields, trust badges. Meta supports none</li>
+      </ul>
     </div>
-    <p class="footnote">Sources: help.shopify.com/en/manual/ai-powered-tools/sidekick set-up and help-and-guidance pages; shopify.com/sidekick. Accessed 2026-11-01.</p>
+    <div class="card">
+      <h4>Always comes back to you</h4>
+      <p>All refunds for orders placed through AI channels must be processed through your Shopify admin. A published return and refund policy is mandatory to take part at all.</p>
+    </div>
   </div>
+
+  <h3>Your analytics will under-count this channel</h3>
+  <div class="prose">
+    <p>In a direct checkout, Google Analytics and custom pixels will not fire. Only server-to-server pixels do. Expect gaps in GA4 and in ad-platform attribution for in-chat orders.</p>
+    <p>The admin still shows Sales, Orders, Sessions and Conversion per channel, and that figure combines referral and direct checkout. Performance analytics are not yet available for headless stores.</p>
+  </div>
+  <p class="pullquote">Do not let a dashboard that cannot see this channel decide it is not working.</p>
+
+  <h3>Who owns the customer</h3>
+  <div class="cards c2">
+    <div class="card">
+      <h4>Stays yours</h4>
+      <ul>
+        <li>You remain merchant and seller of record on every channel</li>
+        <li>Your customer database and full order history</li>
+        <li>Fulfillment, service and the returns relationship</li>
+      </ul>
+    </div>
+    <div class="card">
+      <h4>Shared on direct-checkout channels</h4>
+      <ul>
+        <li>Order details including the customer's name, email, phone and address</li>
+        <li>Once shared, that data is governed by the AI company's terms, not Shopify's</li>
+      </ul>
+    </div>
+  </div>
+
+  <h3>Put it to work</h3>
+  <div class="cards c2">
+    <div class="card">
+      <span class="num">01</span>
+      <p><strong>Go and look.</strong> Open Sales channels, then Agentic. See which channels are on, whether direct checkout is on, and whether Shopify is managing it for you.</p>
+    </div>
+    <div class="card">
+      <span class="num">02</span>
+      <p><strong>Audit the data.</strong> Find products missing an image, a category, a mapped metafield or a price. Those are the products no assistant will recommend.</p>
+    </div>
+    <div class="card">
+      <span class="num">03</span>
+      <p><strong>Publish your facts.</strong> Review what Shopify drafted into the Knowledge base. Nothing reaches agents until you publish it, so an unpublished draft is a silent gap.</p>
+    </div>
+    <div class="card">
+      <span class="num">04</span>
+      <p><strong>Decide per channel.</strong> For products that break in an in-chat checkout, choose referral deliberately rather than discovering it through a failed order.</p>
+    </div>
+  </div>
+
+  <div class="slot">
+    <span class="tag">Content slot &nbsp;&middot;&nbsp; use cases and prompts</span>
+    <p>Amanda's own operator use cases for this section, beyond the four starter actions above.</p>
+  </div>
+
+  <p class="sources"><strong>Sources</strong>
+    <a href="https://help.shopify.com/en/manual/shopify-catalog">Shopify Catalog</a> and
+    <a href="https://help.shopify.com/en/manual/shopify-catalog/requirements">its requirements</a>;
+    <a href="https://help.shopify.com/en/manual/online-sales-channels/agentic-storefronts">Agentic Storefronts</a> and its per-channel and data-privacy pages;
+    <a href="https://shopify.dev/docs/agents/catalog/global-catalog">Global Catalog</a>, shopify.dev;
+    <a href="https://ucp.dev">ucp.dev</a>;
+    Knowledge base, changelog.shopify.com, 26 October 2026. Accessed 1 November 2026.</p>
 </section>
 
-<section>
-  <div class="slide-body center">
-    <p class="eyebrow"><span class="num">05</span> Capability map</p>
-    <h2>Read, draft, or do</h2>
+<!-- ---------- 05 SHOP ---------- -->
+<section class="section" id="shop">
+  <p class="eyebrow"><span class="n">05</span> Where buyers meet you <span class="lane">Buyer-facing</span></p>
+  <h2>Shop</h2>
+  <p class="standfirst">Shopify's own consumer surface, and the payment rails now running inside other people's agents.</p>
+
+  <div class="cards c2">
+    <div class="card">
+      <h4>What buyers get in Shop</h4>
+      <ul>
+        <li>A conversational agent for search, recommendations and order help</li>
+        <li>Personalized ranking and storefronts</li>
+        <li>Shop Minis</li>
+        <li>A universal multi-brand cart, with multi-store checkout in the app</li>
+      </ul>
+    </div>
+    <div class="card">
+      <h4>What outside agents get</h4>
+      <ul>
+        <li>Through shop.md and Shop's agent interface, outside assistants can search and check out using Shop Pay</li>
+        <li>Every purchase requires buyer approval unless the buyer opts into an agent budget</li>
+      </ul>
+    </div>
+  </div>
+
+  <h3>You cannot opt out, so operate it</h3>
+  <div class="cards c3">
+    <div class="card">
+      <h4>Data and merchandising</h4>
+      <p>The same product data that drives Catalog drives Shop. Posts and merchandising are yours to control.</p>
+    </div>
+    <div class="card">
+      <h4>Checkout posture</h4>
+      <p>Direct checkout versus referral is a decision you make, product by product and channel by channel.</p>
+    </div>
+    <div class="card">
+      <h4>Spend and measurement</h4>
+      <p>Shop Campaigns budget, customer-acquisition targets and segment overrides, with analytics under Sales channels, then Shop.</p>
+    </div>
+  </div>
+
+  <div class="callout">
+    <p><strong>One conflict to verify for your markets.</strong> The Fall 2026 Edition describes wider availability for the agent in Shop, while the Help Center still scopes conversational search to the United States and Canada.</p>
+  </div>
+
+  <p class="sources"><strong>Sources</strong> Shop channel and Shop Campaigns documentation, help.shopify.com;
+    <a href="https://www.shopify.com/news/fall-26-edition-merchant">Fall 2026 Edition</a>, 28 October 2026. Accessed 1 November 2026.</p>
+</section>
+
+<!-- ---------- 06 SIDEKICK ---------- -->
+<section class="section" id="sidekick">
+  <p class="eyebrow"><span class="n">06</span> Where you run the store <span class="lane">Operator-facing</span></p>
+  <h2>Sidekick</h2>
+  <p class="standfirst">The assistant already inside your admin, included with your plan.</p>
+
+  <h3>What it is</h3>
+  <div class="prose">
+    <p>Sidekick is Shopify's AI commerce assistant, used to get guidance and complete complex, technical tasks in everyday language. It sits on most pages of the admin and in the Shopify mobile app, with nothing to install. Features and usage limits vary by plan, and it respects each staff member's existing permissions.</p>
+  </div>
+
+  <div class="callout">
+    <span class="big">It asks first</span>
+    <p>Sidekick cannot change your live store without your approval. Work it drafts lands in a Store changes card that holds up to 50 changes, and those drafts expire 10 days after the last update.</p>
+  </div>
+
+  <h3>Capability map</h3>
+  <div class="tablewrap">
     <table>
       <thead>
-        <tr><th style="width:26%">Job</th><th style="width:16%">What it does</th><th style="width:58%">Detail</th></tr>
+        <tr><th style="width:24%">Job</th><th style="width:16%">What it does</th><th style="width:60%">Detail</th></tr>
       </thead>
       <tbody>
         <tr><td>Analytics and reporting</td><td><span class="pill read">Reads</span></td><td>Writes ShopifyQL, returns charts, links to custom explorations, answers chargeback questions within your access</td></tr>
@@ -514,171 +555,123 @@
         <tr><td>Marketing and content</td><td><span class="pill write">Drafts</span></td><td>Blog posts, pages, email campaigns, images. Images stay private until you save them to files</td></tr>
         <tr><td>Theme and storefront</td><td><span class="pill write">Drafts</span></td><td>Works in the theme editor or Canvas. In the regular editor it can only add sections and blocks your theme already has</td></tr>
         <tr><td>Flow automation</td><td><span class="pill write">Drafts</span></td><td>Builds a workflow from a description. It is inactive by default and you must turn it on</td></tr>
+        <tr><td>Custom apps</td><td><span class="pill write">Drafts</span></td><td>Generates small admin apps. Desktop only, and staff need the App development permission</td></tr>
         <tr><td>Checkout configuration</td><td><span class="pill no">Guidance only</span></td><td>Unlike the theme editor, Sidekick cannot directly change your checkout configuration</td></tr>
         <tr><td>Refunds, reserves, payouts</td><td><span class="pill no">Will not</span></td><td>Cannot release a reserve, remove an account hold or change payout details</td></tr>
       </tbody>
     </table>
-    <p class="footnote">Sources: help.shopify.com/en/manual/ai-powered-tools/sidekick help-and-guidance and generate-content; help.shopify.com/en/manual/shopify-flow/create/create-workflow. Accessed 2026-11-01.</p>
   </div>
+
+  <h3>The part people miss: Skills</h3>
+  <div class="prose">
+    <p>A Skill is a saved, reusable instruction you trigger with a slash name, up to 50 per store and in some stores 25. This is the difference between one clever operator getting good answers and your whole team getting the same answer. Sidekick may also apply a matching skill automatically. Memory is on by default and keeps conversations for about three months.</p>
+  </div>
+  <div class="prompts c2">
+    <div class="prompt"><span class="job">/weekly-summary</span><span class="say">Give me a weekly performance summary</span></div>
+    <div class="prompt"><span class="job">/low-stock-alert</span><span class="say">Make sure I never run out of inventory</span></div>
+    <div class="prompt"><span class="job">/shipping-audit</span><span class="say">Audit my shipping configurations</span></div>
+    <div class="prompt"><span class="job">/build-collections</span><span class="say">Organize my products into smart collections</span></div>
+  </div>
+
+  <h3>Prompts to start with</h3>
+  <p class="prose">These are Shopify's own documented examples, quoted as published.</p>
+  <div class="prompts c2">
+    <div class="prompt"><span class="job">Performance</span><span class="say">Chart my daily sales for the last 90 days as a line chart, and then describe the 3 biggest spikes</span></div>
+    <div class="prompt"><span class="job">Performance</span><span class="say">Compare my sales this quarter to the same quarter last year</span></div>
+    <div class="prompt"><span class="job">Margin</span><span class="say">Show me the sales, costs, profits, returns, and discounts for my top 100 products</span></div>
+    <div class="prompt"><span class="job">Risk</span><span class="say">What was my chargeback rate for the last 90 days?</span></div>
+    <div class="prompt"><span class="job">Merchandising</span><span class="say">Help me create a collection, add products to it, and set up a discount for it</span></div>
+    <div class="prompt"><span class="job">Findability</span><span class="say">Rewrite the page title and meta description for @PRODUCT, and keep the title under 60 characters</span></div>
+    <div class="prompt"><span class="job">Automation</span><span class="say">Create a workflow that cancels and refunds orders with a high fraud risk level</span></div>
+    <div class="prompt"><span class="job">Operations</span><span class="say">Insert the return policy template and fill in my store's address</span></div>
+  </div>
+
+  <div class="slot">
+    <span class="tag">Content slot &nbsp;&middot;&nbsp; Amanda's prompts and screenshots</span>
+    <p>Her own prompt set for this section, plus Sidekick screenshots from a live store.</p>
+  </div>
+
+  <p class="sources"><strong>Sources</strong>
+    <a href="https://help.shopify.com/en/manual/ai-powered-tools/sidekick/help-and-guidance">Sidekick help and guidance</a>,
+    set-up, generate-content, generate-apps, skills and memory pages, help.shopify.com;
+    <a href="https://www.shopify.com/sidekick">shopify.com/sidekick</a>. Accessed 1 November 2026.</p>
 </section>
 
-<section>
-  <div class="slide-body center">
-    <p class="eyebrow"><span class="num">05</span> The part people miss</p>
-    <h2>Skills turn a good prompt into a standard</h2>
-    <div class="split wide-left">
-      <div>
-        <p class="lede">A Skill is a saved, reusable instruction you trigger with a slash name. Up to 50 per store, and in some stores 25.</p>
-        <p class="sub">This is the difference between one clever operator getting good answers and your whole team getting the same answer. Sidekick may also apply a matching skill automatically. Memory is on by default and keeps conversations about three months.</p>
-      </div>
-      <div>
-        <p class="col-label">Shortcuts Shopify documents</p>
-        <div class="prompt"><span class="job">/weekly-summary</span><span class="say">Give me a weekly performance summary</span></div>
-        <div class="prompt" style="margin-top:10px"><span class="job">/low-stock-alert</span><span class="say">Make sure I never run out of inventory</span></div>
-        <div class="prompt" style="margin-top:10px"><span class="job">/shipping-audit</span><span class="say">Audit my shipping configurations</span></div>
-      </div>
+<!-- ---------- 07 CANVAS ---------- -->
+<section class="section" id="canvas">
+  <p class="eyebrow"><span class="n">07</span> Where you run the store <span class="lane">Operator-facing</span></p>
+  <h2>Canvas</h2>
+  <p class="standfirst">Designing the storefront by describing it. Announced 1 October 2026, in early access.</p>
+
+  <h3>What it is</h3>
+  <div class="prose">
+    <p>Canvas displays all your store's templates side by side on one board. You can ask Sidekick to build or change your theme from your description, or edit blocks, settings and text yourself. You reach it under <strong>Online Store</strong>, then <strong>Themes</strong>, by choosing New, or Duplicate in Canvas on a supported theme. Changes autosave, and your customers cannot view them until you publish.</p>
+    <p>The difference from the normal theme editor matters. There, Sidekick can only add sections and blocks your theme already includes. In Canvas it can build blocks the theme does not have, because it is writing real theme code and checking its own work.</p>
+  </div>
+
+  <h3>The constraints that decide whether this is for you</h3>
+  <div class="cards c2">
+    <div class="card">
+      <h4>Access</h4>
+      <ul>
+        <li>Early access, available only to certain stores</li>
+        <li>Desktop only</li>
+        <li>Your plan must include theme customization</li>
+        <li>Staff need the Edit code permission under Online store, then Themes</li>
+        <li>Shopify-developed and custom themes only. Third-party themes are not supported</li>
+      </ul>
     </div>
-    <p class="footnote">Quoted from shopify.com/sidekick. Skills and memory detail from help.shopify.com/en/manual/ai-powered-tools/sidekick. Accessed 2026-11-01.</p>
-  </div>
-</section>
-
-<section>
-  <div class="slide-body center">
-    <p class="eyebrow"><span class="num">05</span> Prompts to start with</p>
-    <h2>Shopify's own documented examples</h2>
-    <div class="prompts c2">
-      <div class="prompt"><span class="job">Performance</span><span class="say">Chart my daily sales for the last 90 days as a line chart, and then describe the 3 biggest spikes</span></div>
-      <div class="prompt"><span class="job">Performance</span><span class="say">Compare my sales this quarter to the same quarter last year</span></div>
-      <div class="prompt"><span class="job">Margin</span><span class="say">Show me the sales, costs, profits, returns, and discounts for my top 100 products</span></div>
-      <div class="prompt"><span class="job">Risk</span><span class="say">What was my chargeback rate for the last 90 days?</span></div>
-      <div class="prompt"><span class="job">Merchandising</span><span class="say">Help me create a collection, add products to it, and set up a discount for it</span></div>
-      <div class="prompt"><span class="job">Findability</span><span class="say">Rewrite the page title and meta description for @PRODUCT, and keep the title under 60 characters</span></div>
-      <div class="prompt"><span class="job">Automation</span><span class="say">Create a workflow that cancels and refunds orders with a high fraud risk level</span></div>
-      <div class="prompt"><span class="job">Operations</span><span class="say">Insert the return policy template and fill in my store's address</span></div>
-    </div>
-    <p class="footnote">Quoted verbatim from help.shopify.com/en/manual/ai-powered-tools/sidekick/help-and-guidance and /generate-content. Accessed 2026-11-01.</p>
-  </div>
-</section>
-
-<!-- ============ 06 CANVAS ============ -->
-<section class="divider" id="canvas">
-  <div class="slide-body">
-    <p class="eyebrow"><span class="num">06</span> Operator-facing</p>
-    <h2>Canvas</h2>
-    <div class="rule-pink"></div>
-    <p class="lede">Designing the storefront by describing it. Announced October 2026, in early access.</p>
-  </div>
-</section>
-
-<section>
-  <div class="slide-body center">
-    <p class="eyebrow"><span class="num">06</span> What it is</p>
-    <h2>Every template, side by side, on one board</h2>
-    <div class="split wide-left">
-      <div>
-        <p class="lede">Canvas displays all your store's templates side by side. You can ask Sidekick to build or change your theme from your description, or edit blocks, settings and text yourself.</p>
-        <p class="sub">You reach it under Online Store, then Themes, by choosing New, or Duplicate in Canvas on a supported theme. Changes autosave, and your customers cannot view them until you publish.</p>
-      </div>
-      <div>
-        <div class="card">
-          <h3>Why it is different from the editor</h3>
-          <p>In the normal theme editor, Sidekick can only add sections and blocks your theme already includes.</p>
-          <p>In Canvas it can build blocks the theme does not have, because it is writing real theme code and checking its own work.</p>
-        </div>
-      </div>
-    </div>
-    <p class="footnote">Sources: help.shopify.com/en/manual/online-store/themes/canvas; changelog.shopify.com 2026-10-01; shopify.com/news/introducing-canvas. Accessed 2026-11-01.</p>
-  </div>
-</section>
-
-<section>
-  <div class="slide-body center">
-    <p class="eyebrow"><span class="num">06</span> Before anyone opens it</p>
-    <h2>The constraints that decide whether this is for you</h2>
-    <div class="split">
-      <div>
-        <p class="col-label">Access</p>
-        <ul class="sub">
-          <li>Early access, available only to certain stores</li>
-          <li>Desktop only</li>
-          <li>Your plan must include theme customization</li>
-          <li>Staff need the Edit code permission under Online store, then Themes</li>
-          <li>Shopify-developed and custom themes only. Third-party themes are not supported</li>
-        </ul>
-      </div>
-      <div>
-        <p class="col-label">Trade-offs, once you commit a theme</p>
-        <ul class="sub">
-          <li>A theme edited in Canvas opens only in Canvas, not the theme editor</li>
-          <li>Canvas themes do not receive theme updates, and their files cannot be downloaded</li>
-          <li>App blocks and app embeds cannot be added or configured in Canvas</li>
-          <li>No translation inside Canvas, and no per-market customization</li>
-        </ul>
-      </div>
-    </div>
-    <p class="footnote">Duplicate before you experiment: the original theme stays editable in the regular editor. Source: help.shopify.com/en/manual/online-store/themes/canvas/requirements, accessed 2026-11-01.</p>
-  </div>
-</section>
-
-<section>
-  <div class="slide-body center">
-    <p class="eyebrow"><span class="num">06</span> Put it to work</p>
-    <h2>Where Canvas earns its place</h2>
-    <div class="cards c3" style="margin-top:18px">
-      <div class="card">
-        <h3>Seasonal and campaign pages</h3>
-        <p>A landing experience that would normally wait on an agency queue, built and reviewed in an afternoon, published only when you say so.</p>
-      </div>
-      <div class="card">
-        <h3>Testing a direction</h3>
-        <p>Duplicate into Canvas, describe the direction, and look at a real rendered store rather than a static comp.</p>
-      </div>
-      <div class="card">
-        <h3>Second and third storefronts</h3>
-        <p>Sub-brands and regional stores that never justified a full design project.</p>
-      </div>
-    </div>
-    <div class="callout" style="margin-top:22px">
-      <p class="sub"><strong>Not yet for:</strong> a flagship theme that depends on app blocks, per-market customization or regular theme updates. Those limits are structural today, not a rollout gap.</p>
+    <div class="card">
+      <h4>Trade-offs once you commit a theme</h4>
+      <ul>
+        <li>A theme edited in Canvas opens only in Canvas, not the theme editor</li>
+        <li>Canvas themes do not receive theme updates, and their files cannot be downloaded</li>
+        <li>App blocks and app embeds cannot be added or configured in Canvas</li>
+        <li>No translation inside Canvas, and no per-market customization</li>
+      </ul>
     </div>
   </div>
-</section>
+  <p class="prose">Duplicate before you experiment. The original theme stays editable in the regular editor.</p>
 
-<!-- ============ 07 CONNECTORS ============ -->
-<section class="divider" id="connectors">
-  <div class="slide-body">
-    <p class="eyebrow"><span class="num">07</span> Operator-facing</p>
-    <h2>AI connectors</h2>
-    <div class="rule-pink"></div>
-    <p class="lede">Your store, behind the assistant your team already has open.</p>
-  </div>
-</section>
-
-<section>
-  <div class="slide-body center">
-    <p class="eyebrow"><span class="num">07</span> The surprise</p>
-    <h2>This is a Shopify product, not something each AI vendor built</h2>
-    <div class="split wide-left">
-      <div>
-        <p class="lede">Shopify publishes official connectors for seven assistants: ChatGPT, Claude, Gemini, Grok, Muse, Perplexity and Microsoft Copilot.</p>
-        <p class="sub">They all run on the same Shopify-hosted service, so what they can do is nearly identical. What differs is where you install it, whether results come back visually or as text, and the AI vendor's own plan and admin rules.</p>
-      </div>
-      <div>
-        <div class="card">
-          <h3>How it installs</h3>
-          <p>From inside the AI tool, not the Shopify App Store. You then approve a data access level in your Shopify admin.</p>
-          <p>One store at a time. Access is capped by the permissions of the staff account that connects, and you cannot lower a level you already approved without reinstalling.</p>
-        </div>
-      </div>
+  <h3>Where Canvas earns its place</h3>
+  <div class="cards c3">
+    <div class="card">
+      <h4>Seasonal and campaign pages</h4>
+      <p>A landing experience that would normally wait on an agency queue, built and reviewed in an afternoon, published only when you say so.</p>
     </div>
-    <p class="footnote">Source: help.shopify.com/en/manual/ai-powered-tools/connecting-ai-tools and its per-tool pages, accessed 2026-11-01.</p>
+    <div class="card">
+      <h4>Testing a direction</h4>
+      <p>Duplicate into Canvas, describe the direction, and look at a real rendered store rather than a static comp.</p>
+    </div>
+    <div class="card">
+      <h4>Second and third storefronts</h4>
+      <p>Sub-brands and regional stores that never justified a full design project.</p>
+    </div>
   </div>
+
+  <div class="callout">
+    <p><strong>Not yet for</strong> a flagship theme that depends on app blocks, per-market customization or regular theme updates. Those limits are structural today, not a rollout gap.</p>
+  </div>
+
+  <p class="sources"><strong>Sources</strong>
+    <a href="https://help.shopify.com/en/manual/online-store/themes/canvas">Canvas</a> and its requirements and customizing pages, help.shopify.com;
+    changelog.shopify.com and <a href="https://www.shopify.com/news/introducing-canvas">Introducing Canvas</a>, 1 October 2026. Accessed 1 November 2026.</p>
 </section>
 
-<section>
-  <div class="slide-body center">
-    <p class="eyebrow"><span class="num">07</span> Capability map</p>
-    <h2>The same line in every tool</h2>
+<!-- ---------- 08 CONNECTORS ---------- -->
+<section class="section" id="connectors">
+  <p class="eyebrow"><span class="n">08</span> Where you run the store <span class="lane">Operator-facing</span></p>
+  <h2>AI connectors</h2>
+  <p class="standfirst">Your store, behind the assistant your team already has open.</p>
+
+  <h3>The surprise</h3>
+  <div class="prose">
+    <p>This is a Shopify product, not something each AI vendor built. Shopify publishes official connectors for seven assistants: ChatGPT, Claude, Gemini, Grok, Muse, Perplexity and Microsoft Copilot. They all run on the same Shopify-hosted service, so what they can do is nearly identical. What differs is where you install it, whether results come back visually or as text, and the AI vendor's own plan and admin rules.</p>
+    <p>You install from inside the AI tool, not the Shopify App Store, then approve a data access level in your Shopify admin. One store at a time. Access is capped by the permissions of the staff account that connects, and you cannot lower a level you already approved without reinstalling.</p>
+  </div>
+
+  <h3>Capability map</h3>
+  <div class="tablewrap">
     <table>
       <thead>
         <tr><th style="width:30%">Area</th><th style="width:18%">Access</th><th style="width:52%">Detail</th></tr>
@@ -695,347 +688,226 @@
         <tr><td>Plan, payments, taxes, domains</td><td><span class="pill no">Blocked</span></td><td>Not reachable from any connector</td></tr>
       </tbody>
     </table>
-    <p class="footnote">Sources: the per-tool pages and the considerations page under help.shopify.com/en/manual/ai-powered-tools/connecting-ai-tools. Accessed 2026-11-01.</p>
   </div>
-</section>
 
-<section>
-  <div class="slide-body center">
-    <p class="eyebrow"><span class="num">07</span> Governance</p>
-    <h2>Three sentences to put in front of your risk team</h2>
-    <div class="cards c3" style="margin-top:18px">
-      <div class="card">
-        <h3>Nobody reviews the actions</h3>
-        <p>Actions that connected AI tools take on your behalf are not reviewed or approved by Shopify.</p>
-      </div>
-      <div class="card">
-        <h3>You own the mistake</h3>
-        <p>If an AI tool makes an incorrect change to your store, then you are responsible for that change.</p>
-      </div>
-      <div class="card">
-        <h3>The data leaves</h3>
-        <p>After you provide access, that data is no longer processed by Shopify and is subject to the other company's terms and privacy policy.</p>
-      </div>
+  <h3>Three sentences for your risk team</h3>
+  <div class="cards c3">
+    <div class="card">
+      <h4>Nobody reviews the actions</h4>
+      <p>Actions that connected AI tools take on your behalf are not reviewed or approved by Shopify.</p>
     </div>
-    <div class="callout" style="margin-top:24px">
-      <p class="sub"><strong>The practical control is the staff account.</strong> The connector acts through one person's permissions, so connect with an account scoped to the job, not the owner account. Revoke by uninstalling in the Shopify admin.</p>
+    <div class="card">
+      <h4>You own the mistake</h4>
+      <p>If an AI tool makes an incorrect change to your store, then you are responsible for that change.</p>
     </div>
-    <p class="footnote">Quoted from help.shopify.com/en/manual/ai-powered-tools/connecting-ai-tools/considerations and /authorizing-access. Accessed 2026-11-01.</p>
-  </div>
-</section>
-
-<section>
-  <div class="slide-body center">
-    <p class="eyebrow"><span class="num">07</span> Prompts to start with</p>
-    <h2>Shopify's own documented examples</h2>
-    <div class="prompts c2">
-      <div class="prompt"><span class="job">Morning check</span><span class="say">Show me my 10 most recent orders.</span></div>
-      <div class="prompt"><span class="job">Performance</span><span class="say">Show me my total sales for the last 30 days, broken down by product.</span></div>
-      <div class="prompt"><span class="job">Acquisition</span><span class="say">@Shopify how did buyers find my store last month?</span></div>
-      <div class="prompt"><span class="job">Retention</span><span class="say">Show my top-spending customers.</span></div>
-      <div class="prompt"><span class="job">Merchandising</span><span class="say">Make a Holiday Gifts collection with my three bestsellers.</span></div>
-      <div class="prompt"><span class="job">Inventory</span><span class="say">How many Vanilla Bean Candles are left?</span></div>
-      <div class="prompt"><span class="job">Promotion</span><span class="say">Make a 15 percent off code called COZY15.</span></div>
-      <div class="prompt"><span class="job">Content</span><span class="say">Add my About page to my main menu and label it About us.</span></div>
-    </div>
-    <p class="footnote">Quoted verbatim from help.shopify.com/en/manual/ai-powered-tools/connecting-ai-tools/shopify-connector-for-claude and shopify.com/blog, 2026-10-28. Accessed 2026-11-01.</p>
-  </div>
-</section>
-
-<section>
-  <div class="slide-body center">
-    <p class="eyebrow"><span class="num">07</span> Where it beats the admin</p>
-    <h2>The real unlock is the data that is not in Shopify</h2>
-    <div class="split wide-left">
-      <div>
-        <p class="lede">A connector is not faster than the admin at admin work. It is better at questions that cross a boundary Shopify cannot see.</p>
-        <p class="sub">Store performance next to the spreadsheet your planner keeps. Inventory next to the supplier email. A weekly summary that pulls from both and writes the update your team actually reads.</p>
-      </div>
-      <div>
-        <div class="card">
-          <h3>Keep in mind</h3>
-          <p>It does not replace your Shopify admin, and it does not replace Sidekick.</p>
-          <p>Large batches run one item at a time and may stop partway. There is no draft state and no version history, so approved changes go to the live store.</p>
-        </div>
-      </div>
-    </div>
-    <p class="footnote">Source: help.shopify.com/en/manual/ai-powered-tools/connecting-ai-tools/shopify-connector-for-claude, accessed 2026-11-01.</p>
-  </div>
-</section>
-
-<!-- ============ 08 AI TOOLKIT ============ -->
-<section class="divider" id="ai-toolkit">
-  <div class="slide-body">
-    <p class="eyebrow"><span class="num">08</span> Operator-facing, technical</p>
-    <h2>Shopify AI Toolkit</h2>
-    <div class="rule-pink"></div>
-    <p class="lede">For whoever writes code for you, in-house or agency.</p>
-  </div>
-</section>
-
-<section>
-  <div class="slide-body center">
-    <p class="eyebrow"><span class="num">08</span> What it is</p>
-    <h2>Giving a coding assistant accurate Shopify context</h2>
-    <div class="split wide-left">
-      <div>
-        <p class="lede">The AI Toolkit connects AI coding tools to Shopify's docs, API schemas and CLI-based store management so they can help build more accurately.</p>
-        <p class="sub">It works with Claude Code, Codex, Cursor, VS Code and others, installed as a plugin, as agent skills, or as a local server. Store actions run through the Shopify CLI's authenticated context, with the developer choosing when to execute them.</p>
-      </div>
-      <div>
-        <div class="card">
-          <h3>Why a non-technical leader should know it exists</h3>
-          <p>Coding assistants guess at platform details and get them wrong. This is the difference between an assistant that invents a Shopify API and one that reads the real schema.</p>
-          <p>It is a quality and rework question, not a new line item.</p>
-        </div>
-      </div>
-    </div>
-    <p class="footnote">It does not remove the need to review and test the result. Sources: shopify.dev/docs/apps/build/ai-toolkit; shopify.dev changelog 2026-04-09. Accessed 2026-11-01.</p>
-  </div>
-</section>
-
-<section>
-  <div class="slide-body center">
-    <p class="eyebrow"><span class="num">08</span> The question to ask</p>
-    <h2>Three things to put to your development partner</h2>
-    <div class="cards c3" style="margin-top:18px">
-      <div class="card">
-        <h3>01</h3>
-        <p><strong>Are you using the Shopify AI Toolkit?</strong></p>
-        <p>If their assistant is working from memory rather than the live schema, you are paying for the corrections.</p>
-      </div>
-      <div class="card">
-        <h3>02</h3>
-        <p><strong>What is authorized to touch our store?</strong></p>
-        <p>The CLI connector authorizes API access and nothing more. Know which store and which scopes.</p>
-      </div>
-      <div class="card">
-        <h3>03</h3>
-        <p><strong>Who reviews what it writes?</strong></p>
-        <p>Speed here moves the review burden, it does not remove it. Name the reviewer.</p>
-      </div>
+    <div class="card">
+      <h4>The data leaves</h4>
+      <p>After you provide access, that data is no longer processed by Shopify and is subject to the other company's terms and privacy policy.</p>
     </div>
   </div>
-</section>
-
-<!-- ============ 09 FLOW ============ -->
-<section class="divider" id="flow">
-  <div class="slide-body">
-    <p class="eyebrow"><span class="num">09</span> Operator-facing</p>
-    <h2>Flow</h2>
-    <div class="rule-pink"></div>
-    <p class="lede">The automation layer, and an honest account of how much AI is actually in it.</p>
+  <div class="callout">
+    <p><strong>The practical control is the staff account.</strong> The connector acts through one person's permissions, so connect with an account scoped to the job rather than the owner account. Revoke by uninstalling in the Shopify admin.</p>
   </div>
+
+  <h3>Prompts to start with</h3>
+  <div class="prompts c2">
+    <div class="prompt"><span class="job">Morning check</span><span class="say">Show me my 10 most recent orders.</span></div>
+    <div class="prompt"><span class="job">Performance</span><span class="say">Show me my total sales for the last 30 days, broken down by product.</span></div>
+    <div class="prompt"><span class="job">Acquisition</span><span class="say">@Shopify how did buyers find my store last month?</span></div>
+    <div class="prompt"><span class="job">Retention</span><span class="say">Show my top-spending customers.</span></div>
+    <div class="prompt"><span class="job">Merchandising</span><span class="say">Make a Holiday Gifts collection with my three bestsellers.</span></div>
+    <div class="prompt"><span class="job">Inventory</span><span class="say">How many Vanilla Bean Candles are left?</span></div>
+    <div class="prompt"><span class="job">Promotion</span><span class="say">Make a 15 percent off code called COZY15.</span></div>
+    <div class="prompt"><span class="job">Content</span><span class="say">Add my About page to my main menu and label it About us.</span></div>
+  </div>
+
+  <h3>Where it beats the admin</h3>
+  <div class="prose">
+    <p>A connector is not faster than the admin at admin work. It is better at questions that cross a boundary Shopify cannot see. Store performance next to the spreadsheet your planner keeps. Inventory next to the supplier email. A weekly summary that pulls from both and writes the update your team actually reads.</p>
+    <p>Keep the limits in view. It does not replace your Shopify admin, and it does not replace Sidekick. Large batches run one item at a time and may stop partway. There is no draft state and no version history, so approved changes go to the live store.</p>
+  </div>
+
+  <div class="slot">
+    <span class="tag">Content slot &nbsp;&middot;&nbsp; Amanda's prompts and setup walkthrough</span>
+    <p>Her own prompts, plus a short setup walkthrough with screenshots of the install and permission-approval flow.</p>
+  </div>
+
+  <p class="sources"><strong>Sources</strong>
+    <a href="https://help.shopify.com/en/manual/ai-powered-tools/connecting-ai-tools">Connecting AI tools</a>,
+    its per-tool pages, and the
+    <a href="https://help.shopify.com/en/manual/ai-powered-tools/connecting-ai-tools/considerations">considerations</a> and authorizing-access pages, help.shopify.com. Accessed 1 November 2026.</p>
 </section>
 
-<section>
-  <div class="slide-body center">
-    <p class="eyebrow"><span class="num">09</span> Setting expectations</p>
-    <h2>The AI is around Flow, not inside it</h2>
-    <div class="split">
-      <div>
-        <p class="col-label">Inside a workflow</p>
-        <p class="sub">Flow's only native AI step is a Generate text connector, and it requires you to bring your own OpenAI API key. Shopify's own documentation notes it calls the legacy completions API.</p>
-        <p class="sub">There is no native summarize, classify or ask-AI action, and no AI conditions, as of 2026-11-01.</p>
-      </div>
-      <div>
-        <p class="col-label">Around the workflow</p>
-        <ul class="sub">
-          <li>Sidekick builds a workflow from a plain-language description. It is inactive by default and you must turn it on</li>
-          <li>Sidekick generates test events from real store data without changing the store</li>
-          <li>Sidekick can fix a workflow that will not save</li>
-          <li>External agents can manage Flow through the AI Toolkit, which requires a scope Shopify must approve</li>
-        </ul>
-      </div>
+<!-- ---------- 09 FLOW ---------- -->
+<section class="section" id="flow">
+  <p class="eyebrow"><span class="n">09</span> Where you run the store <span class="lane">Operator-facing</span></p>
+  <h2>Flow</h2>
+  <p class="standfirst">The automation layer, and an honest account of how much AI is actually in it.</p>
+
+  <h3>The AI is around Flow, not inside it</h3>
+  <div class="cards c2">
+    <div class="card">
+      <h4>Inside a workflow</h4>
+      <p>Flow's only native AI step is a Generate text connector, and it requires you to bring your own OpenAI API key. Shopify's own documentation notes it calls the legacy completions API.</p>
+      <p>There is no native summarize, classify or ask-AI action, and no AI conditions, as of 1 November 2026.</p>
     </div>
-    <p class="footnote">Sources: help.shopify.com/en/manual/shopify-flow actions reference and create-workflow; shopify.com/news/fall-26-edition-merchant, 2026-10-28. Accessed 2026-11-01.</p>
-  </div>
-</section>
-
-<section>
-  <div class="slide-body center">
-    <p class="eyebrow"><span class="num">09</span> Put it to work</p>
-    <h2>The pattern that works today</h2>
-    <div class="split wide-left">
-      <div>
-        <p class="lede">Describe the automation you want in words, let Sidekick build it, read it before you activate it.</p>
-        <p class="sub">The off-by-default rule is the useful part. A workflow that silently started running on your live orders is the failure mode this design prevents.</p>
-      </div>
-      <div>
-        <p class="col-label">Documented examples</p>
-        <div class="prompt"><span class="say">I want to create a workflow that tags orders with fewer than 3 line items as "small".</span></div>
-        <div class="prompt" style="margin-top:10px"><span class="say">Help me make a workflow that sends a 'Welcome to the Gold Tier!' email when a customer's lifetime spend exceeds $1000.</span></div>
-      </div>
-    </div>
-    <p class="footnote">Quoted verbatim from help.shopify.com/en/manual/shopify-flow/create/create-workflow. Accessed 2026-11-01.</p>
-  </div>
-</section>
-
-<!-- ============ 10 SHOP ============ -->
-<section class="divider" id="shop">
-  <div class="slide-body">
-    <p class="eyebrow"><span class="num">10</span> Buyer-facing</p>
-    <h2>Shop</h2>
-    <div class="rule-pink"></div>
-    <p class="lede">Shopify's own consumer surface, and the payment rails now running inside other people's agents.</p>
-  </div>
-</section>
-
-<section>
-  <div class="slide-body center">
-    <p class="eyebrow"><span class="num">10</span> Two things at once</p>
-    <h2>An app your buyers use, and rails other agents check out through</h2>
-    <div class="split">
-      <div>
-        <p class="col-label">What buyers get in Shop</p>
-        <ul class="sub">
-          <li>A conversational agent for search, recommendations and order help</li>
-          <li>Personalized ranking and storefronts</li>
-          <li>Shop Minis</li>
-          <li>A universal multi-brand cart, with multi-store checkout in the app</li>
-        </ul>
-      </div>
-      <div>
-        <p class="col-label">What outside agents get</p>
-        <ul class="sub">
-          <li>Through shop.md and Shop's agent interface, outside assistants can search and check out with Shop Pay</li>
-          <li>Every purchase requires buyer approval unless the buyer opts into an agent budget</li>
-        </ul>
-      </div>
-    </div>
-    <p class="footnote">One source conflict to note: Fall '26 describes wider availability for the agent in Shop while the Help Center still scopes conversational search to the US and Canada. Verify for your markets. Accessed 2026-11-01.</p>
-  </div>
-</section>
-
-<section>
-  <div class="slide-body center">
-    <p class="eyebrow"><span class="num">10</span> Your levers</p>
-    <h2>You cannot opt out, so operate it</h2>
-    <div class="cards c3" style="margin-top:18px">
-      <div class="card">
-        <h3>Data and merchandising</h3>
-        <p>The same product data that drives Catalog drives Shop. Posts and merchandising are yours to control.</p>
-      </div>
-      <div class="card">
-        <h3>Checkout posture</h3>
-        <p>Direct checkout versus referral is a decision you make, product by product and channel by channel.</p>
-      </div>
-      <div class="card">
-        <h3>Spend and measurement</h3>
-        <p>Shop Campaigns budget, customer-acquisition targets and segment overrides, with analytics under Sales channels, then Shop.</p>
-      </div>
-    </div>
-    <p class="footnote">Sources: help.shopify.com Shop channel and Shop Campaigns documentation; shopify.com/news/fall-26-edition-merchant, 2026-10-28. Accessed 2026-11-01.</p>
-  </div>
-</section>
-
-<!-- ============ 11 DECIDE ============ -->
-<section class="divider" id="decide">
-  <div class="slide-body">
-    <p class="eyebrow"><span class="num">11</span> What to do with this</p>
-    <h2>Four decisions that belong to you, not your team</h2>
-    <div class="rule-pink"></div>
-    <p class="lede">Everything else is delegable.</p>
-  </div>
-</section>
-
-<section>
-  <div class="slide-body center">
-    <p class="eyebrow"><span class="num">11</span> The decisions</p>
-    <h2>Make these on purpose</h2>
-    <div class="cards c2" style="margin-top:14px">
-      <div class="card">
-        <h3>01 &nbsp; Your checkout posture</h3>
-        <p>Which products sell inside an assistant, and which send the buyer to your own checkout. Driven by what breaks in an in-chat checkout, not by enthusiasm.</p>
-      </div>
-      <div class="card">
-        <h3>02 &nbsp; Who holds the keys</h3>
-        <p>Connectors inherit one staff account's permissions. Decide which account, with which scope, and who may connect one at all.</p>
-      </div>
-      <div class="card">
-        <h3>03 &nbsp; Your data standard</h3>
-        <p>Product data stopped being a merchandising chore and became distribution. Someone owns its completeness, with a number attached.</p>
-      </div>
-      <div class="card">
-        <h3>04 &nbsp; What you will measure</h3>
-        <p>Given that client-side pixels do not fire in direct checkout, agree now what counts as the truth. Otherwise the channel gets killed by a dashboard that cannot see it.</p>
-      </div>
+    <div class="card">
+      <h4>Around the workflow</h4>
+      <ul>
+        <li>Sidekick builds a workflow from a plain-language description. It is inactive by default and you must turn it on</li>
+        <li>Sidekick generates test events from real store data without changing the store</li>
+        <li>Sidekick can fix a workflow that will not save</li>
+        <li>External agents can manage Flow through the AI Toolkit, which requires a scope Shopify must approve</li>
+      </ul>
     </div>
   </div>
+
+  <h3>The pattern that works today</h3>
+  <div class="prose">
+    <p>Describe the automation you want in words, let Sidekick build it, and read it before you activate it. The off-by-default rule is the useful part. A workflow that silently started running against your live orders is exactly the failure this design prevents.</p>
+  </div>
+  <div class="prompts">
+    <div class="prompt"><span class="job">Documented example</span><span class="say">I want to create a workflow that tags orders with fewer than 3 line items as "small".</span></div>
+    <div class="prompt"><span class="job">Documented example</span><span class="say">Help me make a workflow that sends a 'Welcome to the Gold Tier!' email when a customer's lifetime spend exceeds $1000.</span></div>
+  </div>
+
+  <p class="sources"><strong>Sources</strong>
+    <a href="https://help.shopify.com/en/manual/shopify-flow/create/create-workflow">Create a workflow</a> and the Flow actions reference, help.shopify.com;
+    <a href="https://www.shopify.com/news/fall-26-edition-merchant">Fall 2026 Edition</a>, 28 October 2026. Accessed 1 November 2026.</p>
 </section>
 
-<section>
-  <div class="slide-body center">
-    <p class="eyebrow"><span class="num">11</span> A caution worth the slide</p>
-    <h2>Approval is the design, not the friction</h2>
-    <div class="split wide-left">
-      <div>
-        <p class="lede">Almost every surface here drafts and waits. Sidekick holds changes for review. Flow workflows start inactive. Connectors confirm before Admin API changes and before publishing a theme.</p>
-        <p class="sub">The pattern is deliberate, and the organizations that get hurt will be the ones that treat the approval step as a formality to speed through.</p>
-      </div>
-      <div>
-        <div class="card">
-          <h3>The one-line policy</h3>
-          <p>A person who understands the consequence approves the change, and that person is not the person who asked for it.</p>
-        </div>
-      </div>
+<!-- ---------- 10 AI TOOLKIT ---------- -->
+<section class="section" id="ai-toolkit">
+  <p class="eyebrow"><span class="n">10</span> Where you run the store <span class="lane">Operator-facing, technical</span></p>
+  <h2>Shopify AI Toolkit</h2>
+  <p class="standfirst">For whoever writes code for you, in-house or agency.</p>
+
+  <h3>What it is</h3>
+  <div class="prose">
+    <p>The AI Toolkit connects AI coding tools to Shopify's docs, API schemas and CLI-based store management so they can help build more accurately. It works with Claude Code, Codex, Cursor, VS Code and others, installed as a plugin, as agent skills, or as a local server. Store actions run through the Shopify CLI's authenticated context, with the developer choosing when to execute them.</p>
+    <p>Why a non-technical leader should care: coding assistants guess at platform details and get them wrong. This is the difference between an assistant that invents a Shopify API and one that reads the real schema. It is a quality and rework question, not a new line item. It does not remove the need to review and test the result.</p>
+  </div>
+
+  <h3>Three things to put to your development partner</h3>
+  <div class="cards c3">
+    <div class="card">
+      <span class="num">01</span>
+      <p><strong>Are you using the Shopify AI Toolkit?</strong> If their assistant is working from memory rather than the live schema, you are paying for the corrections.</p>
+    </div>
+    <div class="card">
+      <span class="num">02</span>
+      <p><strong>What is authorized to touch our store?</strong> The CLI connector authorizes API access and nothing more. Know which store and which scopes.</p>
+    </div>
+    <div class="card">
+      <span class="num">03</span>
+      <p><strong>Who reviews what it writes?</strong> Speed here moves the review burden, it does not remove it. Name the reviewer.</p>
     </div>
   </div>
+
+  <p class="sources"><strong>Sources</strong>
+    <a href="https://shopify.dev/docs/apps/build/ai-toolkit">AI Toolkit</a>, shopify.dev;
+    shopify.dev changelog, 9 April 2026;
+    <a href="https://help.shopify.com/en/manual/ai-powered-tools/shopify-cli-connector">Shopify CLI connector</a>, help.shopify.com. Accessed 1 November 2026.</p>
 </section>
 
-<!-- ============ CLOSE ============ -->
-<section class="no-mark divider">
-  <div class="slide-body center">
-    <h2 style="font-size:2.2em">Start with the one that is already on.</h2>
-    <div class="rule-pink"></div>
-    <p class="lede">Open Sales channels, then Agentic, and look at what your store is already doing without you.</p>
-    <div class="meta" style="font-family:var(--font-label);font-weight:700;font-size:0.44em;letter-spacing:0.12em;text-transform:uppercase;color:var(--peach);margin-top:44px">Amanda Sannella &nbsp;&middot;&nbsp; amandasannella.com</div>
+<!-- ---------- 11 DECIDE ---------- -->
+<section class="section" id="decide">
+  <p class="eyebrow"><span class="n">11</span> What to do with this</p>
+  <h2>Four decisions that belong to you</h2>
+  <p class="standfirst">Everything else here is delegable. These four are not.</p>
+
+  <div class="cards c2">
+    <div class="card">
+      <span class="num">01</span>
+      <h4>Your checkout posture</h4>
+      <p>Which products sell inside an assistant, and which send the buyer to your own checkout. Driven by what breaks in an in-chat checkout, not by enthusiasm.</p>
+    </div>
+    <div class="card">
+      <span class="num">02</span>
+      <h4>Who holds the keys</h4>
+      <p>Connectors inherit one staff account's permissions. Decide which account, with which scope, and who may connect one at all.</p>
+    </div>
+    <div class="card">
+      <span class="num">03</span>
+      <h4>Your data standard</h4>
+      <p>Product data stopped being a merchandising chore and became distribution. Someone owns its completeness, with a number attached.</p>
+    </div>
+    <div class="card">
+      <span class="num">04</span>
+      <h4>What you will measure</h4>
+      <p>Given that client-side pixels do not fire in direct checkout, agree now what counts as the truth. Otherwise the channel gets killed by a dashboard that cannot see it.</p>
+    </div>
+  </div>
+
+  <h3>Approval is the design, not the friction</h3>
+  <div class="prose">
+    <p>Almost every surface here drafts and waits. Sidekick holds changes for review. Flow workflows start inactive. Connectors confirm before Admin API changes and before publishing a theme. The pattern is deliberate, and the organizations that get hurt will be the ones that treat the approval step as a formality to click through.</p>
+  </div>
+  <p class="pullquote">A person who understands the consequence approves the change, and that person is not the person who asked for it.</p>
+</section>
+
+<!-- ---------- 12 SOURCES ---------- -->
+<section class="section" id="sources">
+  <p class="eyebrow"><span class="n">12</span> Sources and currency</p>
+  <h2>Where this came from</h2>
+  <div class="prose">
+    <p>Every capability claim in this guide traces to Shopify's own documentation, verified on 1 November 2026. Primary sources were help.shopify.com, shopify.dev, changelog.shopify.com, the Shopify newsroom and Editions, and the partner companies' official documentation. Community forums, agency blogs and news aggregators were not used as sources for any capability, limit or plan claim.</p>
+    <p>This space moves quickly. Early access and rolling-out items are labelled as such. Before acting on a specific limit, availability or admin path, confirm it against the current documentation, because paths and plan names change often.</p>
   </div>
 </section>
 
-<section>
-  <div class="slide-body center">
-    <p class="eyebrow">Sources and currency</p>
-    <h2>Where this came from</h2>
-    <p class="sub" style="max-width:40em">Every capability claim in this deck traces to Shopify's own documentation, verified on 1 November 2026. Primary sources were help.shopify.com, shopify.dev, changelog.shopify.com, the Shopify newsroom and Editions, and the partner companies' official documentation. Community forums, agency blogs and news aggregators were not used as sources for any capability, limit or plan claim.</p>
-    <p class="sub" style="max-width:40em"><strong>This space moves quickly.</strong> Early access and rolling-out items are labelled as such. Before acting on a specific limit, availability or admin path, confirm it against the current documentation, because paths and plan names change often.</p>
-  </div>
-</section>
-
-</div>
+</main>
 </div>
 
-<script src="vendor/reveal/dist/reveal.js"></script>
-<script src="vendor/reveal/plugin/zoom/zoom.js"></script>
+<footer class="foot">
+  <span>Amanda Sannella &nbsp;&middot;&nbsp; <a href="https://amandasannella.com">amandasannella.com</a></span>
+  <span>Verified 1 November 2026</span>
+</footer>
+
+<a href="#top" class="totop" id="totop" aria-label="Back to top">&uarr;</a>
+
 <script>
-  Reveal.initialize({
-    width: 1280,
-    height: 720,
-    margin: 0,
-    minScale: 0.2,
-    maxScale: 1.6,
-    hash: true,
-    slideNumber: 'c/t',
-    transition: 'fade',
-    transitionSpeed: 'fast',
-    backgroundTransition: 'none',
-    controls: true,
-    progress: true,
-    center: false,
-    plugins: [ RevealZoom ]
-  });
+(function () {
+  var bar = document.getElementById('progress');
+  var totop = document.getElementById('totop');
+  var links = Array.prototype.slice.call(document.querySelectorAll('.rail a.nav'));
+  var sections = links.map(function (a) {
+    return document.getElementById(a.getAttribute('href').slice(1));
+  }).filter(Boolean);
 
-  // Add a quiet "index" link to every slide except the title and the index itself.
-  Reveal.on('ready', function () {
-    document.querySelectorAll('.reveal .slides > section').forEach(function (sec, i) {
-      if (i === 0 || sec.id === 'index') return;
-      var a = document.createElement('a');
-      a.className = 'to-index';
-      a.href = '#/index';
-      a.textContent = 'Index';
-      sec.appendChild(a);
+  function onScroll() {
+    var h = document.documentElement;
+    var max = h.scrollHeight - h.clientHeight;
+    var pct = max > 0 ? (h.scrollTop / max) * 100 : 0;
+    bar.style.width = pct + '%';
+    totop.classList.toggle('show', h.scrollTop > 700);
+
+    var mark = h.scrollTop + 110;
+    var active = -1;
+    for (var i = 0; i < sections.length; i++) {
+      if (sections[i].offsetTop <= mark) active = i;
+    }
+    links.forEach(function (a, i) { a.classList.toggle('active', i === active); });
+  }
+
+  var ticking = false;
+  window.addEventListener('scroll', function () {
+    if (!ticking) {
+      window.requestAnimationFrame(function () { onScroll(); ticking = false; });
+      ticking = true;
+    }
+  }, { passive: true });
+  window.addEventListener('resize', onScroll);
+  onScroll();
+
+  // On narrow screens, collapse the contents panel after choosing a destination.
+  var det = document.querySelector('.rail details');
+  links.forEach(function (a) {
+    a.addEventListener('click', function () {
+      if (window.matchMedia('(max-width: 1100px)').matches && det) det.open = false;
     });
   });
+})();
 </script>
 </body>
 </html>
